@@ -1,0 +1,18 @@
+{
+  "name": "serverless-for-cica",
+  "version": "1.0.0",
+  "description": "for-cica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "netlify-server": "netlify dev"
+  },
+  "author": "rado",
+  "license": "ISC",
+  "dependencies": {
+    "airtable": "^0.11.5",
+    "dotenv": "^16.0.3",
+    "netlify": "^13.0.2",
+    "netlify-cli": "^12.2.6"
+  }
+}

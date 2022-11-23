@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  padding: 4ex;
+  color: white;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2ex;
+}
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2ex;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid gold;
+  padding: 1ex;
+}
+.product > * {
+  border-bottom: 4px solid gold;
+}
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
