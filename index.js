@@ -2,8 +2,7 @@ const productsContainer = document.querySelector(".products-container");
 
 const fetchData = async () => {
   try {
-    // const resp = await fetch("/.netlify/functions/1-hello/");
-    const resp = await fetch("/api/cicaStore/");
+    const resp = await fetch("/api/allProducts/");
     const data = await resp.json();
     const UI = data
       .map(entry => {
