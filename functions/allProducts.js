@@ -8,9 +8,8 @@ const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
 
 exports.handler = async (event, context) => {
   try {
-    // const data = await airtable.list(data)
-    // const {products}
     const { records } = await airtable.list();
+    console.log(records);
     const products = records.map(entry => {
       const { id } = entry;
       const {
@@ -23,8 +22,9 @@ exports.handler = async (event, context) => {
         description,
         color,
         image,
-      } = entry;
-      const URL = image[0].url;
+      } = entry.fields;
+      console.log(image);
+      //   const URL = image[0].url;
       return {
         id,
         name,
@@ -36,9 +36,10 @@ exports.handler = async (event, context) => {
         description,
         color,
         image,
-        URL,
+        // URL,
       };
     });
+    console.log(products);
     return {
       headers: {
         "Access-Control-Allow-Origin": "*",
@@ -47,6 +48,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify(products),
     };
   } catch (error) {
+    console.log(error);
     return {
       headers: {
         "Access-Control-Allow-Origin": "*",

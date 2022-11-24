@@ -8,6 +8,10 @@ body {
   padding: 4ex;
   color: white;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 h1 {
   text-align: center;
   font-size: 3rem;
@@ -20,6 +24,8 @@ h1 {
   gap: 2ex;
 }
 .product {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   border: 4px solid gold;
