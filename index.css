@@ -7,6 +7,8 @@ body {
   background-color: black;
   padding: 4ex;
   color: white;
+  display: grid;
+  place-items: center;
 }
 a {
   text-decoration: none;
